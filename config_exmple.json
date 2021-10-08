@@ -1,0 +1,9 @@
+{
+    "aws_credentials": {
+    "secretAccessKey": "CREDENTIAL-HERE",
+    "accessKeyId": "CREDENTIAL-HERE",
+    "region":"us-east-1",
+    "bucket":"tasky-file-uploads"
+  },
+  "sentryKey":"SENTRY-API=KEY"
+}
