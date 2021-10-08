@@ -4,7 +4,7 @@ const cors = require('cors')
 const imageUploader = require('./image_controller');
 const Sentry = require("@sentry/node");
 const Tracing = require("@sentry/tracing");
-const config = require('./config.json')
+const env = process.env.NODE_ENV || 'development';
 
 const app = express();
 app.use(cors())
@@ -15,7 +15,8 @@ app.use(express.urlencoded({
 }));
 
 Sentry.init({
-    dsn: config.sentryKey,
+  environment: env,
+    dsn: process.env.SENTRY_KEY,
     integrations: [
       // enable HTTP calls tracing
       new Sentry.Integrations.Http({ tracing: true }),
