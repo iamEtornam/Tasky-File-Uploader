@@ -13,6 +13,6 @@ This service is responsible for file update for the [Tasky Backend Service](http
 3. url: ```localhost:4000/api/v0/upload```
 
 ## Deployment
-1. docker build -t tasky-file-uploader-api .
-2. zip -r api.zip .
+1. ```docker build -t tasky-file-uploader-api .```
+2. ```zip -r api.zip .```
 3. upload zip file to elasticbeanstalk on aws.com
