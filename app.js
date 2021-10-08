@@ -1,6 +1,7 @@
 const express = require('express');
 const logger = require('morgan');
 const cors = require('cors')
+require('dotenv').config();
 const imageUploader = require('./image_controller');
 const Sentry = require("@sentry/node");
 const Tracing = require("@sentry/tracing");
