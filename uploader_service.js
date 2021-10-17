@@ -23,7 +23,6 @@ const upload = multer({
     key: function (req, file, cb) {
       cb(null, `${Date.now()}-${file.originalname}`)
     }
-  }),
-  limits: { fileSize: 100000000 }
+  })
 });
 module.exports = upload;
