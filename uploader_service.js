@@ -12,7 +12,6 @@ const uploadFile = (req, res) => {
   const { files } = req;
   const bucket = process.env.CLOUDINARY_BUCKET
 
-  console.log('files', files);
   crypto.randomBytes(16, async (err, buf)=>{
     try {
       if(err) return res.status(400).json({success: false, message: err.message})
